@@ -1,0 +1,28 @@
+{
+  "name": "siapt-unand",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo SIAPT UNAND - Sistem Informasi Perpustakaan Terpadu (Frontend React & Backend Express)",
+  "workspaces": [
+    "frontend",
+    "backend/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"frontend,backend\" -c \"cyan,green\" \"npm run dev -w frontend\" \"npm run dev -w @siapt/backend-express\"",
+    "dev:frontend": "npm run dev -w frontend",
+    "dev:backend": "npm run dev -w @siapt/backend-express",
+    "build": "npm run build -w frontend",
+    "lint": "npm run lint -w frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbrarRayva/siapt-unand.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbrarRayva/siapt-unand/issues"
+  },
+  "homepage": "https://github.com/AbrarRayva/siapt-unand#readme"
+}
